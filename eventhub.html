@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub Clone - Discover Amazing Events</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="eventhub.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#">EventHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header id="home" class="hero-section d-flex align-items-center text-center">
+            <div class="container position-relative z-1">
+                <h1 class="display-3 animate__animated animate__fadeInDown animate__delay-0-5s">Discover & Attend Amazing Events</h1>
+                <p class="lead col-lg-8 mx-auto animate__animated animate__fadeInUp animate__delay-1s">Find local meetups, concerts, and fests near you. Your next great experience is just a click away.</p>
+                <a href="#events" class="btn btn-primary btn-lg mt-4 px-5 py-3 rounded-pill animate__animated animate__zoomIn animate__delay-1-5s">Explore Events <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="hero-bg-parallax"></div>
+        </header>
+        <section id="events" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading" data-aos="fade-up">Upcoming Events</h2>
+
+                <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-3 mb-3 mb-md-0">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100 rounded-pill py-2" type="button" id="dropdownCategory" data-bs-toggle="dropdown" aria-expanded="false">
+                                Category: All
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCategory">
+                                <li><a class="dropdown-item" href="#">All</a></li>
+                                <li><a class="dropdown-item" href="#">Music</a></li>
+                                <li><a class="dropdown-item" href="#">Tech</a></li>
+                                <li><a class="dropdown-item" href="#">Sports</a></li>
+                                <li><a class="dropdown-item" href="#">Wellness</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle w-100 rounded-pill py-2" type="button" id="dropdownDate" data-bs-toggle="dropdown" aria-expanded="false">
+                                Date: All
+                            </button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownDate">
+                                <li><a class="dropdown-item" href="#">All</a></li>
+                                <li><a class="dropdown-item" href="#">This Week</a></li>
+                                <li><a class="dropdown-item" href="#">This Month</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="event-cards-container">
+                    </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-5 bg-light-gray">
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading" data-aos="fade-up">Why Choose EventHub?</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-box p-4 rounded shadow-sm h-100">
+                            <i class="bi bi-calendar-event fs-1 text-primary mb-3"></i>
+                            <h4 class="mb-3 fw-bold">Diverse Events</h4>
+                            <p class="text-muted">From music festivals to tech conferences, find events that match every interest and passion.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-box p-4 rounded shadow-sm h-100">
+                            <i class="bi bi-geo-alt-fill fs-1 text-primary mb-3"></i>
+                            <h4 class="mb-3 fw-bold">Local & Global</h4>
+                            <p class="text-muted">Discover exciting events happening right in your city or explore major global gatherings.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-box p-4 rounded shadow-sm h-100">
+                            <i class="bi bi-person-check-fill fs-1 text-primary mb-3"></i>
+                            <h4 class="mb-3 fw-bold">Easy Registration</h4>
+                            <p class="text-muted">Secure your spot with our streamlined, quick, and hassle-free registration process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading" data-aos="fade-up">What Our Users Say</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up" data-aos-delay="100">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex flex-column align-items-center text-center p-4">
+                                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cfdfeeab?auto=format&fit=crop&q=80&w=100" class="rounded-circle mb-3 border border-primary border-3" alt="User 1">
+                                        <p class="lead mb-3 fst-italic">"EventHub made finding local tech meetups incredibly easy. The interface is clean and registration was a breeze!"</p>
+                                        <p class="fw-bold">- Jane Doe, Tech Enthusiast</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex flex-column align-items-center text-center p-4">
+                                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100" class="rounded-circle mb-3 border border-primary border-3" alt="User 2">
+                                        <p class="lead mb-3 fst-italic">"I've discovered so many amazing music festivals through EventHub. It's my go-to for planning my weekends!"</p>
+                                        <p class="fw-bold">- John Smith, Music Lover</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex flex-column align-items-center text-center p-4">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29329?auto=format&fit=crop&q=80&w=100" class="rounded-circle mb-3 border border-primary border-3" alt="User 3">
+                                        <p class="lead mb-3 fst-italic">"Fantastic platform! Always up-to-date with events and the details are always accurate. Highly recommended!"</p>
+                                        <p class="fw-bold">- Emily White, Event Goer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="py-5 bg-primary text-white text-center">
+            <div class="container" data-aos="fade-up">
+                <h2 class="mb-3 fw-bold">Stay Updated with Latest Events!</h2>
+                <p class="lead mb-4">Subscribe to our newsletter and never miss an exciting event near you.</p>
+                <form class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="input-group mb-3 w-50">
+                        <input type="email" class="form-control form-control-lg rounded-start-pill py-3" placeholder="Enter your email" aria-label="Email for newsletter" required>
+                        <button class="btn btn-dark btn-lg rounded-end-pill px-4" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4 section-heading" data-aos="fade-up">About EventHub</h2>
+                <p class="lead text-center col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="100">EventHub is a platform dedicated to connecting people with events that match their passions. Our mission is to make discovering and attending events easier and more enjoyable for everyone. Whether you're into music, tech, sports, or arts, we've got something for you.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 bg-light-gray">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-9">
+                        <div class="bg-white p-4 p-md-5 rounded-4 shadow-lg" data-aos="fade-up">
+                            <h2 class="text-center mb-4 section-heading-small">Register for an Event</h2>
+                            <form id="registrationForm">
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="fullName" placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="selectEvent" class="form-label">Select Event</label>
+                                    <select class="form-select form-select-lg" id="selectEvent" aria-label="Select an event" required>
+                                        <option value="" selected disabled>Choose an event...</option>
+                                    </select>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill py-3 mt-3">Submit Registration</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Taufiqshaikh | All Rights Reserved</p>
+            <div class="social-icons mt-3">
+                <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="eventDetailModal" tabindex="-1" aria-labelledby="eventDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="eventDetailModalLabel">Event Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <img id="modalEventImg" src="" class="img-fluid rounded-3 mb-3" alt="Event Image">
+                    <p class="text-muted mb-1"><i class="bi bi-calendar me-2"></i><strong>Date:</strong> <span id="modalEventDate"></span></p>
+                    <p class="text-muted mb-3"><i class="bi bi-geo-alt me-2"></i><strong>Location:</strong> <span id="modalEventLocation"></span></p>
+                    <p id="modalEventDescription" class="mb-4"></p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+                    <a href="#contact" class="btn btn-primary rounded-pill px-4" id="modalRegisterBtn" data-bs-dismiss="modal">Register Now <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,  
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
